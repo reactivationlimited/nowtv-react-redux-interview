@@ -10,6 +10,12 @@ export const messagesFetched = (messages) => ({
   messages,
 })
 
+export const fetchMessages = () => async (dispatch) => {
+  dispatch(messagesPending())
+  const messages = await getMessages()
+  dispatch(messagesFetched(messages))
+}
+
 export const reducer = (state = {}, action) => {
   switch (action) {
     default:
