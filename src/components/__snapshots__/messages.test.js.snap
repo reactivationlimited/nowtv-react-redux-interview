@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The Messages component when the status is FETCHED should match a snapshot 1`] = `
+<div>
+  messages
+</div>
+`;
+
+exports[`The Messages component when the status is PENDING should match a snapshot 1`] = `
+<div>
+  Loading messages
+</div>
+`;
