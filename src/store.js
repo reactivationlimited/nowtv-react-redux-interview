@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import { createBrowserHistory } from 'history'
 
 import { createRootReducer } from './reducers'
+import { fetchMessages } from './reducers/messages'
 
 export const history = createBrowserHistory();
 
@@ -29,3 +30,5 @@ export const store = createStore(
   initialState,
   composedEnhancers,
 );
+
+store.dispatch(fetchMessages());
