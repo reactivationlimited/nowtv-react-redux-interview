@@ -21,6 +21,22 @@ describe('The messages reducer', () => {
     const state = {}
     expect(reducer(state)).toBe(state)
   })
+  it('should return a state with status set to PENDING if the action is MESSAGES_PENDING', () => {
+  	const state = {};
+  	const action = messagesPending()
+  	expect(reducer(state, action)).toEqual({
+  		status: 'PENDING'
+  	})
+  })
+  it('should return a state with status set to fetched and some messages if the action is MESSAGES_FETCHED', () => {
+  	const messages = {};
+  	const state = {};
+  	const action = messagesFetched(messages);
+  	expect(reducer(state, action)).toEqual({
+  		status: 'FETCHED',
+  		messages
+  	})
+  })
 })
 
 describe('The messagesPending action creator', () => {
