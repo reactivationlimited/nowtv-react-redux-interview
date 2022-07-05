@@ -11,7 +11,8 @@ const messages = [
     "message": "Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.",
     "timestamp": "2017-02-09T04:27:38Z",
     "member": {
-    	"email": 'foo@bar.test'
+    	"email": 'foo@bar.test',
+    	"avatar": 'mugshot@bar.test',
     }
   },
   {
@@ -48,9 +49,12 @@ describe('The Messages component', () => {
 		it('should render messages', () => {
 			for(let message of messages) {
 				expect(wrapper.contains(message.message)).toBe(true);
-				const email = message.member?.email
-				if(email) {
-  		 		expect(wrapper.exists(`div[title="${email}"]`)).toBe(true);
+				const member = message.member
+				if(member?.email) {
+  		 		expect(wrapper.exists(`div[title="${member?.email}"]`)).toBe(true);
+				}
+				if(member?.avatar) {
+  		 		expect(wrapper.exists(`img[href="${member?.avatar}"]`)).toBe(true);
 				}
 			}
 		})

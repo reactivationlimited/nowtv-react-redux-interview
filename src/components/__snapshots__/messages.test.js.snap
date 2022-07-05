@@ -6,11 +6,22 @@ exports[`The Messages component when the status is FETCHED should match a snapsh
     key="cd445e6d-e514-424f-ba8f-16ec842002c6"
     title="foo@bar.test"
   >
+    <img
+      alt=""
+      height="100"
+      href="mugshot@bar.test"
+      width="100"
+    />
     Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.
   </div>
   <div
     key="b03569ae-ccbf-4975-8040-4daba638b407"
   >
+    <img
+      alt=""
+      height="100"
+      width="100"
+    />
     Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.
   </div>
 </div>
