@@ -5,7 +5,7 @@ export const messagesPending = () => ({
   type: MESSAGES_PENDING,
 })
 
-export const messagesFetched = (messages, members) => ({
+export const messagesFetched = (messages) => ({
   type: MESSAGES_FETCHED,
   messages,
 })
