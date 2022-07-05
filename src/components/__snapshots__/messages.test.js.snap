@@ -12,6 +12,8 @@ exports[`The Messages component when the status is FETCHED should match a snapsh
       href="mugshot@bar.test"
       width="100"
     />
+    9th Feb 2017 04:02
+     
     Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.
   </div>
   <div
@@ -22,6 +24,8 @@ exports[`The Messages component when the status is FETCHED should match a snapsh
       height="100"
       width="100"
     />
+    9th Nov 2016 05:11
+     
     Integer a nibh. In quis justo. Maecenas rhoncus aliquam lacus.
   </div>
 </div>

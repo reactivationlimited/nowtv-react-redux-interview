@@ -3989,6 +3989,11 @@
     "whatwg-mimetype" "^2.2.0"
     "whatwg-url" "^7.0.0"
 
+"date-fns@^2.28.0":
+  "integrity" "sha512-8d35hViGYx/QH0icHYCeLmsLmMUheMmTyV9Fcm6gvNwdw31yXXH+O85sOBJ+OLnLQMKZowvpKb6FgMIQjcpvQw=="
+  "resolved" "https://registry.npmjs.org/date-fns/-/date-fns-2.28.0.tgz"
+  "version" "2.28.0"
+
 "date-now@^0.1.4":
   "integrity" "sha1-6vQ5/U1ISK105cx9vvIAZyueNFs="
   "resolved" "https://registry.npmjs.org/date-now/-/date-now-0.1.4.tgz"
