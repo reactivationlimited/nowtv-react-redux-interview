@@ -15,17 +15,20 @@ const mockStore = configureMockStore([thunk])
 
 describe('The messages reducer', () => {
   it('should return the intial state if passed no arguments', () => {
-    expect(reducer()).toEqual({})
+    expect(reducer()).toEqual({
+      messages: []
+    })
   })
   it('should return the passed state unmodified if it is not also passed an action', () => {
     const state = {}
     expect(reducer(state)).toBe(state)
   })
-  it('should return a state with status set to PENDING if the action is MESSAGES_PENDING', () => {
+  it('should return a state with status set to PENDING and an empty array of messages if the action is MESSAGES_PENDING', () => {
   	const state = {};
   	const action = messagesPending()
   	expect(reducer(state, action)).toEqual({
-  		status: 'PENDING'
+  		status: 'PENDING',
+      messages: []
   	})
   })
   it('should return a state with status set to fetched and some messages if the action is MESSAGES_FETCHED', () => {

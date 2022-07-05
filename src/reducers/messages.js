@@ -21,10 +21,13 @@ export const fetchMessages = () => async (dispatch) => {
   dispatch(messagesFetched(messages))
 }
 
-export const reducer = (state = {}, action = {}) => {
+export const reducer = (state = {
+  messages: []
+}, action = {}) => {
   switch (action.type) {
   	case MESSAGES_PENDING: return {
-  		status: 'PENDING'
+      status: 'PENDING',
+      messages: []
   	}
   	case MESSAGES_FETCHED: return {
   		...state,
