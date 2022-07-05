@@ -7,7 +7,7 @@ import {
   messagesFetched,
   fetchMessages,
 } from './messages'
-import { getMessages } from '../data/index.js'
+import { getMessages, getMembers } from '../data/index.js'
 
 jest.mock('../data/index.js')
 
@@ -58,10 +58,16 @@ describe('The messagesFetched action creator', () => {
 })
 
 describe('The fetchMessages thunk', () => {
-  it('should dispatch the correct actions', async () => {
+  it('should dispatch the correct actions, load data and join', async () => {
     const store = mockStore()
-    const messages = 'MESSAGES'
+    const messages = [{
+      userId: 'foo'
+    }];
+    const members = [{
+      id: 'foo'
+    }];
     getMessages.mockReturnValueOnce(messages)
+    getMembers.mockReturnValueOnce(members)
 
     await store.dispatch(fetchMessages())
 
@@ -71,9 +77,15 @@ describe('The fetchMessages thunk', () => {
       },
       {
         type: 'MESSAGES_FETCHED',
-        messages,
+        messages: [{
+          userId: 'foo',
+          member: {
+            id: 'foo'
+          }
+        }]
       },
     ])
     expect(getMessages).toHaveBeenCalledTimes(1)
+    expect(getMembers).toHaveBeenCalledTimes(1)
   })
 })
