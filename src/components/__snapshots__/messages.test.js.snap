@@ -4,6 +4,7 @@ exports[`The Messages component when the status is FETCHED should match a snapsh
 <div>
   <div
     key="cd445e6d-e514-424f-ba8f-16ec842002c6"
+    title="foo@bar.test"
   >
     Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla.
   </div>
